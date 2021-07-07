@@ -14,7 +14,3 @@ So we will be using MongoDB, expressJS , node and native react.
 The goal of this application is to help pastry owners sell their leftovers cheaper and faster so that potential clients can grab themselves tasty sweets.
 
 	CRUD : Categories => Products => Offers
-
-	Test merge.
-
-	Merge test 2.
