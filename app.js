@@ -4,8 +4,8 @@ const app = express();
 require('dotenv/config')
 
 //Import routes 
-const postsRoutes = require ('./routes/posts');
-app.use('/posts', postsRoutes);
+const productsRoutes = require ('./routes/products');
+app.use('/products', productsRoutes);
 
 //Port Listenner
 app.listen(3000);
