@@ -6,6 +6,8 @@ require('dotenv/config')
 //Import routes 
 const productsRoutes = require ('./routes/products');
 app.use('/products', productsRoutes);
+const offersRoutes = require ('./routes/offers');
+app.use('/offers', offersRoutes);
 
 //Port Listenner
 app.listen(3000);
