@@ -16,3 +16,5 @@ The goal of this application is to help pastry owners sell their leftovers cheap
 	CRUD : Categories => Products => Offers
 
 	Test merge.
+
+	Merge test 2.
