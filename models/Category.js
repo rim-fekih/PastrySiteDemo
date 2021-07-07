@@ -2,7 +2,6 @@ var mongoose = require('mongoose')
 , Schema = mongoose.Schema
 
 var categorySchema = Schema({
-  _id         : Schema.Types.ObjectId,
   title       : String,
   description : String,
   products    : 

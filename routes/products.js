@@ -2,14 +2,35 @@ const express = require ('express');
 
 const router = express.Router();
 
-//ROUTES
-router.get('/',(req, res)=>
-{
-    res.send('We are on products');
-});
+const Product = require('../models/Product');
 
-router.get('/specific',(req, res)=>
-{
-    res.send('We are on specific products');
-});
+let productCTRL = require('../controllers/productController');
+
+
+
+//ROUTES
+//router.get('/',productCTRL.GetTest1);
+
+//router.get('/specific',productCTRL.GetTest2);
+
+
+//router.post('/',productCTRL.create);
+
+router.post('/', async (req, res) => {
+    const product = new Product ({
+        title: req.body.title,
+        description: req.body.description,
+        price: req.body.price,
+        exp_Date: req.body.exp_Date
+    });
+
+     // Save product in the database
+    try{
+        const savedProduct = await product.save();
+        res.json(savedProduct);
+    }
+    catch(err){
+        res.json({message : err.message});
+    }
+})
 module.exports = router;

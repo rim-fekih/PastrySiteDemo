@@ -3,6 +3,9 @@ const mongoose = require ('mongoose');
 const app = express();
 require('dotenv/config')
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 //Import routes 
 const productsRoutes = require ('./routes/products');
 app.use('/products', productsRoutes);
